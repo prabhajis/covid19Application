@@ -1,0 +1,12 @@
+CREATE DATABASE covid19;
+
+USE covid19;
+
+CREATE TABLE patients_records (
+  patient_id INT AUTO_INCREMENT PRIMARY KEY,
+  district VARCHAR(255) NOT NULL,
+  age INT NOT NULL,
+  gender ENUM('F', 'M') NOT NULL,
+  travel_history ENUM('YES', 'NO') NOT NULL,
+  status ENUM('RECOVERED', 'UNDETERMINE','DEAD') NOT NULL,
+  recorded_timestamp timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP); 
